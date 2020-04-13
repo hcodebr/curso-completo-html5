@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Event</title>
+</head>
+<body>
+    
+    <div onwheel="debug(event)">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, quam. Fugit facilis tenetur, doloribus vero, laboriosam quas hic reprehenderit amet, aliquam harum earum ipsum saepe commodi numquam explicabo non tempora!
+    </div>
+
+    <script>
+    function debug(event) {
+        console.log('Evento:', event.type);
+        console.log('===================');
+    }
+    </script>
+
+</body>
+</html>

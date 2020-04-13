@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dados</title>
+</head>
+<body>
+
+    <ul>
+        <li data-id="1" data-email="joao@hcode.com.br">João Rangel</li>
+        <li data-id="2" data-email="glaucio@hcode.com.br">Glaucio Daniel</li>
+        <li data-id="3" data-email="djalma@hcode.com.br">Djalma Sindeaux</li>
+    </ul>
+
+    <script>
+    
+        const liCollection = document.querySelectorAll('li');
+
+        liCollection.forEach(li => {
+
+            li.addEventListener('click', e => {
+
+                console.log(li.dataset);
+                console.log(li.dataset.email);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

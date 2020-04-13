@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+tbody tr:nth-of-type(odd) {
+    background-color: #E1E1E1;
+}
+td, th {
+    padding: 1em;
+}
+
+td.real {
+    text-align: right;
+}
+td.real:before {
+    content: 'R$';
+}
+
+tfoot tr {
+    background-color: #333;
+    color: #fff;
+}

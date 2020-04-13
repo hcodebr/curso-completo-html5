@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Identificação do Elemento</title>
+    <style>
+    #box-1 {
+        background-color: coral;
+        width: 100px;
+        height: 100px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="box-1"></div>
+    <div id="box-1"></div>
+
+    <script>
+    
+    const box1 = document.getElementById('box-1');
+
+    console.log(box1);
+
+    const qsBox1 = document.querySelector('#box-1');
+
+    console.log(qsBox1);
+
+    const qsaBox1 = document.querySelectorAll('#box-1');
+
+    console.log(qsaBox1);
+
+    </script>
+
+</body>
+</html>

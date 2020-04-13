@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag source</title>
+</head>
+<body>
+
+    <picture>
+        <source media="(min-width: 512px)" srcset="images/logo.png">
+        <source media="(min-width: 256px)" srcset="images/logo256.png">
+        <img src="images/logo64.png" alt="Logo">
+    </picture>
+
+    <audio controls>
+        <source src="audios/How_it_Began.mp3" type="audio/mpeg">
+        <source src="audios/How_it_Began.ogg" type="audio/ogg">
+        Seu navegador não suporte a tag audio.
+    </audio>
+    
+</body>
+</html>

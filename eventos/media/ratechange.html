@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Event</title>
+    <style>
+    select {
+     display: block;
+     margin: 1em; 
+    }
+    video {
+        width: 50vw;
+    }
+    </style>
+</head>
+<body>
+    
+    <select onchange="setRate(event)">
+        <option>0.25</option>
+        <option>0.5</option>
+        <option>0.75</option>
+        <option selected value="1">Normal</option>
+        <option>1.25</option>
+        <option>1.5</option>
+        <option>1.75</option>
+        <option>2</option>
+    </select>
+
+    <video 
+        src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4" 
+        controls="controls" 
+        onratechange="debug(event)"
+    ></video>
+
+    <script>
+    function debug(event){
+        console.log('Evento:', event.type);
+        console.log('===================');
+    }
+    function setRate(event){
+        const videoEl = document.querySelector('video');
+        const value = event.target.value;
+        
+        console.log('setRate', value);
+
+        videoEl.playbackRate = value;
+
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tag template</title>
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+
+    <template id="tpl-produto">
+        <tr>
+            <td>Camiseta M</td>
+            <td>1</td>
+            <td class="real">59,90</td>
+            <td class="real">59,90</td>
+        </tr>
+    </template>
+
+    <button type="button">Add</button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Qtd.</th>
+                <th>Preço</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>&nbsp;</td>
+                <td>3</td>
+                <td class="real" colspan="2">159,70</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    
+    <script>
+    const btn = document.querySelector('button');
+    const tpl = document.querySelector('#tpl-produto');
+    const tbody = document.querySelector('tbody');
+
+    btn.addEventListener('click', e => {
+
+        tbody.append(tpl.content.cloneNode(true));
+
+    });
+    </script>
+
+</body>
+</html>

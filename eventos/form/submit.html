@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Event</title>
+</head>
+<body>
+    
+    <form onsubmit="debug(event)">
+        <div>
+            <input type="text">
+        </div>
+        <div>
+            <button>Enviar</button>
+        </div>
+    </form>
+
+    <script>
+    function debug(event) {
+
+        event.preventDefault();
+
+        console.log('Evento: ', event.type);
+        console.log('====================');
+
+    }
+    </script>
+</body>
+</html>
